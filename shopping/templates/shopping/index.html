@@ -1,0 +1,99 @@
+{% extends 'shopping/layout.html' %}
+{% block content %}
+
+<div class="container">
+
+  <div class="row">
+
+   <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Album 제작 실습</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+        <p>
+          <a href="#" class="btn btn-primary">Main call to action</a>
+          <a href="#" class="btn btn-secondary">Secondary action</a>
+        </p>
+      </div>
+    </section>
+    <h2><a>수 동 사 우 나 방문을 환영 합니다.(가족사진)</a></h2>
+        <h3>가족같은 분위기 최상의 서비스로 모시겠습니다.</h3>
+
+    <div class="container">
+	<style type="text/css">
+		.product {float:center; width: 500px; padding: 50px; }
+		.product img {width: 200px; }
+		.product h5 { height: 20px;}
+	</style>
+
+             {% for product in products %}
+	          <div class="product">
+	           	<a href="/product/{{product.id}}">
+
+		          	<div><img src="{{product.image.url}}"/></div>
+
+		        </a>
+		         <h3>{{product.name}}</h3>
+                 <div>${{product.price}}</div>
+                 <pre>{{product.description}}</pre>
+
+	           </div>
+               {% endfor %}
+
+     </div>
+
+ <section class="jumbotron text-left">
+    <footer class="blog-footer">
+      <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a></p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+
+    </footer>
+ </section>
+</div>
+
+</div>
+
+
+
+
+        <div class="col-sm-4 offset-sm-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>전화번호: 031-595-3056<em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+   </div>
+  </div>
+
+ {% endblock %}
