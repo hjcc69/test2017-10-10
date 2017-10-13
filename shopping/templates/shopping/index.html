@@ -21,18 +21,14 @@
     <h2><a>수 동 사 우 나 방문을 환영 합니다.(가족사진)</a></h2>
         <h3>가족같은 분위기 최상의 서비스로 모시겠습니다.</h3>
 
-    <div class="container">
-	<style type="text/css">
-		.product {float:center; width: 500px; padding: 50px; }
-		.product img {width: 200px; }
-		.product h5 { height: 20px;}
-	</style>
+
+
 
              {% for product in products %}
 	          <div class="product">
 	           	<a href="/product/{{product.id}}">
 
-		          	<div><img src="{{product.image.url}}"/></div>
+		          	<div><img src="{{product.image.url}}" width="300"/></div>
 
 		        </a>
 		         <h3>{{product.name}}</h3>
@@ -42,7 +38,7 @@
 	           </div>
                {% endfor %}
 
-     </div>
+
 
  <section class="jumbotron text-left">
     <footer class="blog-footer">
